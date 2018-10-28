@@ -1,28 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { QuestionScreen } from './screens/question';
+import { HomeScreen } from './screens/home';
+import { ProfileScreen } from './screens/profile';
+
+import './app.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    render() {
+        const ScreensRoot = () => (
+            <Router>
+                <div>
+                    <ul className="nav-bar">
+                        <li>
+                            <Link to="/">ICT MCQ</Link>
+                        </li>
+                        <li>
+                            <Link to="/question">Questions</Link>
+                        </li>
+                        <li>
+                            <Link to="/profile">Profile</Link>
+                        </li>
+                    </ul>
+                    <Switch>
+                        <Route path="/" component={HomeScreen} exact/>
+                        <Route path="/question" component={QuestionScreen} />
+                        <Route path="/profile" component={ProfileScreen} />
+                    </Switch>
+                </div>
+            </Router>
+        );
+
+        return (
+            <div>
+                <ScreensRoot />
+            </div>
+        );
+    }
 }
 
 export default App;
