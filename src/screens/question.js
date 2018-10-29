@@ -39,7 +39,7 @@ export class QuestionScreen extends Component {
         return (
             <div className="app">
                 <header>
-                    <h1>ICT MCQ</h1>
+                    <h1>React MCQ</h1>
                 </header>
 
                 <QuestionItem

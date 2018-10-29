@@ -13,7 +13,7 @@ class App extends Component {
                 <div>
                     <ul className="nav-bar">
                         <li>
-                            <Link to="/">ICT MCQ</Link>
+                            <Link to="/">React MCQ</Link>
                         </li>
                         <li>
                             <Link to="/question">Questions</Link>
