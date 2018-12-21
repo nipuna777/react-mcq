@@ -1,29 +1,35 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import { QuestionScreen } from './screens/question';
-import { HomeScreen } from './screens/home';
-import { ProfileScreen } from './screens/profile';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { QuestionScreen } from './screens/Question';
+import { HomeScreen } from './screens/Home';
+import { ProfileScreen } from './screens/Profile';
 
-import './app.css';
+import Toolbar from './components/Toolbar/Toolbar';
+import SideDrawer from './components/SideDrawer/SideDrawer';
+import Backdrop from './components/Backdrop/Backdrop';
+
+import './App.css';
 
 class App extends Component {
+    state = {
+        sideDrawerOpen: false
+    };
+
+    drawerToggleClickHandler = () => {
+        this.setState((prevState) => (
+            { sideDrawerOpen: !prevState.sideDrawerOpen }
+        ));
+    };
+
     render() {
         const ScreensRoot = () => (
             <Router>
-                <div>
-                    <ul className="nav-bar">
-                        <li>
-                            <Link to="/">React MCQ</Link>
-                        </li>
-                        <li>
-                            <Link to="/question">Questions</Link>
-                        </li>
-                        <li>
-                            <Link to="/profile">Profile</Link>
-                        </li>
-                    </ul>
+                <div style={{ height: '100vh' }}>
+                    <Toolbar />
+                    <SideDrawer />
+                    <Backdrop />
                     <Switch>
-                        <Route path="/" component={HomeScreen} exact/>
+                        <Route path="/" component={HomeScreen} exact />
                         <Route path="/question" component={QuestionScreen} />
                         <Route path="/profile" component={ProfileScreen} />
                     </Switch>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function QuestionItem(props) {
+const questionItem = function (props) {
   const answerList = props.question.answers.map((answer  , index) => (
     <li key={index}>
       <label className={(props.selectedAnswer === index) ? 'active' : ''}>
@@ -28,3 +28,5 @@ export function QuestionItem(props) {
     </div>
   )
 }
+
+export default questionItem;

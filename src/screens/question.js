@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { QuestionItem } from '../components/question/item';
+import QuestionItem from '../components/Question/Question';
 
 export class QuestionScreen extends Component {
     constructor(props) {
