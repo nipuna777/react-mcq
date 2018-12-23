@@ -16,30 +16,34 @@ class App extends Component {
     };
 
     drawerToggleClickHandler = () => {
-        this.setState((prevState) => (
-            { sideDrawerOpen: !prevState.sideDrawerOpen }
-        ));
+        this.setState(prevState => ({ sideDrawerOpen: !prevState.sideDrawerOpen }));
+    };
+
+    backdropClickHandler = () => {
+        this.setState(this.setState({ sideDrawerOpen: false }));
     };
 
     render() {
-        const ScreensRoot = () => (
-            <Router>
-                <div style={{ height: '100vh' }}>
-                    <Toolbar />
-                    <SideDrawer />
-                    <Backdrop />
-                    <Switch>
-                        <Route path="/" component={HomeScreen} exact />
-                        <Route path="/question" component={QuestionScreen} />
-                        <Route path="/profile" component={ProfileScreen} />
-                    </Switch>
-                </div>
-            </Router>
-        );
+        let backDrop;
+
+        if (this.state.sideDrawerOpen) {
+            backDrop = <Backdrop click={this.backdropClickHandler} />;
+        }
 
         return (
             <div>
-                <ScreensRoot />
+                <Router>
+                    <div>
+                        <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+                        <SideDrawer isOpen={this.state.sideDrawerOpen} />
+                        {backDrop}
+                        <Switch>
+                            <Route path="/" component={HomeScreen} exact />
+                            <Route path="/question" component={QuestionScreen} />
+                            <Route path="/profile" component={ProfileScreen} />
+                        </Switch>
+                    </div>
+                </Router>
             </div>
         );
     }

@@ -7,7 +7,8 @@ import './Toolbar.css';
 const Toolbar = props => (
     <header>
         <nav className="nav-bar">
-            <DrawerToggleButton className="nav-bar__hamburger"></DrawerToggleButton>
+            <DrawerToggleButton className="nav-bar__hamburger" click={props.drawerClickHandler}>
+            </DrawerToggleButton>
             <div className="nav-bar__logo">
                 <Link to="/">React MCQ</Link>
             </div>

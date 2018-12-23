@@ -5,6 +5,7 @@
     list-style: none;
     width: 100%;
     background: #123;
+    height: 50px;
 }
 
 .nav-bar__logo {
@@ -14,13 +15,8 @@
     align-self: center;
 }
 
-.nav-bar ul {
-    margin: .5em 0;
-}
-
 .nav-bar li {
     min-width: 100px;
-    height: 50px;
     float: left;
     text-align: center;
     display: flex;
@@ -32,4 +28,16 @@
     text-decoration: none;
     margin: auto 0;
     width: 100%;
+}
+
+@media(max-width: 768px) {
+    .nav-bar__items {
+        display: none;
+    }
+}
+
+@media(min-width: 769px) {
+    .toggle-button {
+        display: none;
+    }
 }
