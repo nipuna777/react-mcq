@@ -1,0 +1,34 @@
+* {
+    --primary-1000: #003E6B;
+    --primary-900: #0A558C;
+    --primary-800: #0F609B;
+    --primary-700: #186FAF;
+    --primary-600: #2680C2;
+    --primary-500: #4098D7;
+    --primary-400: #62B0E8;
+    --primary-300: #84C5F4;
+    --primary-200: #B6E0FE;
+    --primary-100: #DCEEFB;
+
+    --vivid-1000: #8D2B0B;
+    --vivid-900: #B44D12;
+    --vivid-800: #CB6E17;
+    --vivid-700: #DE911D;
+    --vivid-600: #F0B429;
+    --vivid-500: #F7C948;
+    --vivid-400: #FADB5F;
+    --vivid-300: #FCE588;
+    --vivid-200: #FFF3C4;
+    --vivid-100: #FFFBEA;
+
+    --gray-1000: #102A43;
+    --gray-900: #243B53;
+    --gray-800: #334E68;
+    --gray-700: #486581;
+    --gray-600: #627D98;
+    --gray-500: #829AB1;
+    --gray-400: #9FB3C8;
+    --gray-300: #BCCCDC;
+    --gray-200: #D9E2EC;
+    --gray-100: #F0F4F8;
+}

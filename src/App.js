@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { QuestionScreen } from './screens/Question';
 import { HomeScreen } from './screens/Home';
 import { ProfileScreen } from './screens/Profile';
+import { SummaryScreen } from './screens/Summary';
 
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
@@ -41,6 +42,7 @@ class App extends Component {
                             <Route path="/" component={HomeScreen} exact />
                             <Route path="/question" component={QuestionScreen} />
                             <Route path="/profile" component={ProfileScreen} />
+                            <Route path="/summary" component={SummaryScreen} />
                         </Switch>
                     </div>
                 </Router>
