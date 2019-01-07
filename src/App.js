@@ -34,7 +34,7 @@ class App extends Component {
         return (
             <div>
                 <Router>
-                    <div>
+                    <div className="container">
                         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
                         <SideDrawer isOpen={this.state.sideDrawerOpen} />
                         {backDrop}

@@ -1,0 +1,27 @@
+.menu-item {
+    padding: 1em;
+    box-shadow: var(--shadow-1dp);
+    border-radius: var(--border-radius-3);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.menu-item__text {
+    flex: 1;
+}
+
+.menu-item__text__main {
+    color: var(--primary-1000);
+    font-size: 1.5em;
+    margin-bottom: .2em;
+}
+
+.menu-item__text__sub {
+    color: var(--grey-500);
+    font-size: 1.1em;
+}
+
+.menu-item__arrow {
+    align-self: center;
+}

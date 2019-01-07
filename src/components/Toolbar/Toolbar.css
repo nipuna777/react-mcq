@@ -4,7 +4,7 @@
     margin: 0;
     list-style: none;
     width: 100%;
-    background: #123;
+    background: var(--primary-800);
     height: 50px;
 }
 

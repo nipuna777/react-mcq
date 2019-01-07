@@ -1,0 +1,22 @@
+.home-banner {
+    min-height: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-800);
+    color: var(--grey-200);
+    opacity: .8;
+}
+
+.home-banner p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    width: 75%;
+    text-align: center;
+}
+
+.menu-item-list {
+    list-style: none;
+    margin: 1em;
+    padding: 0;
+}
